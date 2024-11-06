@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Cake</title>
+    <link rel="stylesheet" href="css/styleproduct.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <a>We cake</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="review.html">Ranking</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="OrderProcess">
+            <h1>Order Process</h1>
+            <form action="submit_order.html" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="order">Order</label>
+                    <input type="text" id="order" name="order" placeholder="Enter your order" required>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="reset">Clear Form</button>
+                    <button type="submit">Submit Order</button>
+                </div>
+            </form>
+        </div>
+        <div class="ReviewQueries">
+            <div class="Review_left">
+                <h1>Review queries</h1>
+                <button onclick="location.href='review.html'" type="Learn More">Learn More</button>
+            </div>
+            <div class="Review_right">
+                <div class="GiftIcon">
+                    <img src="/images/icons/icon-02.png" />
+                    <p>Spring Discount</p>
+                    <p>Up to 20% off</p>
+                    <h2>Valid till 30th April</h2>
+                </div>   
+                <div class="CakeIcon">
+                    <img src="/images/icons/icon-01.png" />
+                    <p>New Flavors</p>
+                    <p>Try our seasonal treats</p>
+                    <h2>Limited time only</h2>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a>Contact Us: 123-456-7890</a>
+            <a>Email: info@wecake.com</a>
+        </footer>
+    </div>
+</body>
+</html>
