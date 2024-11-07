@@ -149,10 +149,21 @@ nav ul li a {
     width: 1100px;
 }
 
-.recommendations h3 {
-    font-size: 1.8em;
-    color: #5c4b51;
+#name{
+    margin: 0 auto;
+    text-align: left;
+}
+
+#name a{
+    font-size: 40px;
+    color: #703B3B;
+    font-weight: bold;
     margin-bottom: 10px;
+}
+
+#name p {
+    font-size: 16px;
+    margin-top: 30px;
 }
 
 .featured {
@@ -181,6 +192,16 @@ nav ul li a {
     width: 100px;
     height: 100px;
     border-radius: 8px;
+}
+
+.featured2 a {
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.featured2 p {
+    font-size: 16px;
+    margin-top: 30px;
 }
 
 /* Footer Styling */
