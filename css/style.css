@@ -1,27 +1,13 @@
-.italiana-regular {
-    font-family: "Italiana", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container{
+/* General Styles */
+.container {
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
+    background-color: #FEF7ED;
 }
 
 body {
     font-family: Arial, sans-serif;
-}
-
-.container {
-    width: 1440px;
-    margin: 0 auto;
-    background-color: #FEF7ED;
 }
 
 /* Header Styling */
@@ -31,17 +17,28 @@ header {
     align-items: center;
     padding: 20px 0;
     background-color: #FFFFFF;
+    position: relative;
+    
 }
 
 header a {
     font-family: "Italiana", sans-serif;
     font-size: 48px;
     color: #000000;
+    text-decoration:none;
+}
+
+nav {
+    position: relative;
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: flex-end; /* 將菜單項目靠右對齊 */
 }
 
 nav ul li {
@@ -51,85 +48,87 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #703B3B;
-    font-weight: bold;
     font-family: "Roboto", sans-serif;
     font-size: 20px;
 }
+
+/* Show menu toggle (hamburger icon) */
+.menu-toggle {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+}
+
 
 /* Hero Section */
 .hero {
     position: relative;
     text-align: center;
+    margin: 0 auto;
 }
 
 .hero img {
     width: 100%;
-    height: 689px;
+    width: 100%;
+    height: auto; /* 使圖片高度自動調整 */
 }
 
 .hero-text {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -20%);
     color: #000000;
-    font-size: 158px;
+    font-size: 200px;
     font-family: "Italiana", sans-serif;
 }
 
+a {
+    text-decoration: none; /* 移除底線 */
+    color: #000000;
+}
+
+
 /* Products Section */
-.products {
-    text-align: center;
-    margin-top: 40px;
-    margin: 0 auto;
-    width: 1100px;
-}
 
-.products h2 {
-    margin-top: 50px;
-    font-size: 40px;
-    color: #703B3B;
-    margin-bottom: 10px;
-}
 
-.order-button {
-    margin-top: 23px;
-    margin-bottom: 38px;
-    width: 240px;  /* 设置按钮宽度 */
-    height: 48px;  /* 设置按钮高度 */
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #CCD683;
-    color:#703B3B;
-    border: none;
-}
 
-.order-button:hover {
-    background-color: #5e6f3a;
-    color: #ffffff;
-}
 
+
+/* Products Section */
 .product-gallery {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* 調整間距分配 */
     margin-top: 20px;
+    gap: 15px;
+    padding: 0 35px; /* 添加內部間距 */
 }
 
 .product {
-    width: 340px;
-    height: 420px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%; /* 或者固定寬度 */
+    max-width: 340px; /* 所有產品統一寬度 */
+    height: auto; /* 確保高度自適應內容 */
+    overflow: hidden; /* 防止溢出 */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background-color: #FFFFFF;
     text-align: center;
-    border-radius: 5px;
+}
+
+.product:hover {
+    transform: scale(1.05); /* 一致的放大效果 */
 }
 
 .product img {
-    width: 340px;
-    height: 340px;
+    width: 100%; /* 讓圖片寬度與容器一致 */
+    height: auto; /* 自動調整高度以保持比例 */
+    transition: transform 0.3s ease; /* 確保圖片也有過渡效果 */
 }
+
+.product:hover img {
+    transform: scale(1.05); /* 讓圖片本身在懸停時放大 */
+}
+
 
 .product p {
     margin: 10px 0;
@@ -142,80 +141,356 @@ nav ul li a {
 
 /* Recommendations Section */
 .recommendations {
+    display: flex;
     padding: 20px;
     margin-top: 40px;
     text-align: center;
-    margin: 0 auto;
-    width: 1100px;
+    width: 100%;
+    gap: 90px;
+    justify-content: center;
 }
 
-#name{
-    margin: 0 auto;
-    text-align: left;
-}
-
-#name a{
-    font-size: 40px;
+.recommendations h3 {
+    font-size: 1.8em;
     color: #703B3B;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
-#name p {
-    font-size: 16px;
-    margin-top: 30px;
-}
-
-.featured {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    gap: 20px;
-}
 
 .featured img {
-    width: 486px;
-    height: 298px;
+    width: 500px;
+    height: 300px;
     border-radius: 8px;
+    display: block; /* 避免圖片受行內樣式影響 */
+    border: 10px solid #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.featured-text {
-    text-align: left;
-}
-
-.featured-text h4 {
-    font-size: 1.2em;
-    color: #5c4b51;
+.featured2 {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .featured2 img {
     width: 100px;
     height: 100px;
     border-radius: 8px;
+    border: 7px solid #FFFFFF;
+    margin-right: 20px;
 }
 
-.featured2 a {
-    font-size: 16px;
-    margin-top: 30px;
+.hint {
+    text-align: center;
 }
 
-.featured2 p {
-    font-size: 16px;
-    margin-top: 30px;
+.hint h3 {
+    font-size: 40px;
+    color: #703B3B;
+}
+
+.hint2 {
+    text-align: center;
+}
+
+.hint2 h4 {
+    font-size: 1.2em;
+    color: #703B3B;
+}
+
+.hint2 p {
+    font-size: 0.9em;
+    color: #703B3B;
 }
 
 /* Footer Styling */
 footer {
+    justify-content: center;
     text-align: center;
-    padding: 110px;
+    padding: 30px;
     background-color: #FFFFFF;
-    margin-top: 40px;
+    display: flex;
+    gap: 100px;
+}
+
+footer p {
+    margin-left: 20px;
+    color: #5c4b51;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
     
 }
 
-footer a {
-    margin-left: 20px;
-    color: #5c4b51;
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
+footer img {
+    height: 30px;
+    width: 30px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header a {
+        font-size: 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        
+        width: 100%;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: none; /* 隱藏漢堡菜單按鈕 */
+    }
+
+    nav ul {
+        display: flex; /* 保持菜單為展開狀態 */
+        flex-direction: row;
+        justify-content: space-between;
+        position: static; /* 移除絕對定位 */
+        box-shadow: none; /* 移除陰影效果 */
+    }
+
+
+    .hero-text {
+        font-size: 90%;
+    }
+
+    .order-button {
+        width: 100px;
+    }
+
+    .product-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product img {
+        max-width: 100%;
+        height: 250px;
+        object-fit: cover;  /* 保持圖片比例，避免圖片被裁剪 */
+    }
+
+    .hero-text {
+        font-size: 100px;
+    }
+
+    .hero img {
+        height: auto;
+    }
+
+    .recommendations {
+        transform: scale(0.8); /* 以 80% 比例縮小 recommendations */
+        transform-origin: top center; /* 設定縮放中心點 */
+        gap: 72px; /* 調整項目間的間距以適應縮小後的大小 */
+    }
+
+    .featured img {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .hint h3 {
+        font-size: 30px;
+    }
+
+    .hint h4 {
+        font-size: 1.2em;
+    }
+
+    .hint p {
+        font-size: 1.0em;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+        padding: 30px;
+        background-color: #FFFFFF;
+        display: flex;
+        gap: 100px;
+    }
+    
+    footer p {
+        margin-left: 20px;
+        color: #5c4b51;
+        font-size: 9px;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    footer img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    header {
+        height: 5px;
+    }
+
+    header a {
+        font-size: 18px;
+    }
+
+    nav ul {
+        display: none; /* 隱藏菜單 */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%; /* 讓每個菜單項目填滿整個選單寬度 */
+        text-align: center; /* 將文字置中 */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* 調整字體大小以便於小螢幕上閱讀 */
+        
+        display: block; /* 使連結成為塊級元素，便於點擊 */
+    }
+
+    .menu-toggle {
+        display: block; /* 顯示漢堡菜單按鈕 */
+        display: flex;
+        align-items: center;
+        font-size: 22px; /* 漢堡選單字型大小 */
+    }
+
+    /* 展開菜單 */
+    nav ul.show {
+        display: flex;
+    }
+
+    .hero {
+        text-align: center;
+        
+    }
+
+    .hero-text {
+        font-size: 45Px;
+    }
+
+    .hero img {
+        height: auto;
+    }
+
+    .products p {
+        font-size: 14px;
+    }
+
+
+    .product-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        max-width: 280px; /* 控制最大寬度 */
+        
+        margin: 10px auto; /* 添加上下間距並置中 */
+        margin-bottom: 20px;
+    }
+    
+    .product img {
+        max-height: 200px;
+        object-fit: cover;  /* 保持圖片比例，避免圖片被裁剪 */
+    }
+
+    .price {
+        font-size: 16px; /* 讓價格字體稍大以強調 */
+    }
+
+    .recommendations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured img {
+        width: 80%;  /* 圖片在更小的裝置上全寬顯示 */
+        height: auto;
+        display: flex;
+        
+    }
+
+    .hint {
+        padding: 10px auto ;
+    }
+
+    .hint h3 {
+        font-size: 22px;
+        display: flex;
+    }
+
+    .hint p {
+        font-size: 12px;
+        display: flex;
+    }
+
+    .featured2 {
+        display: flex;
+        flex-direction: column; /* 垂直排列 */
+        align-items: center; /* 水平置中 */
+        justify-content: center; /* 垂直置中 */
+        text-align: center; /* 文字水平置中 */
+        gap: 10px; /* 圖片和文字之間的間距 */
+    }
+    
+    .featured2 img {
+        width: 60%;
+        object-fit: cover;  /* 保持圖片比例，避免圖片被裁剪 */
+    }
+    
+    .hint2 p {
+        font-size: 10px;  /* 字體稍微縮小 */
+    }
+    
+
+    .hint2 h4 {
+        font-size: 17px;
+    }
+
+    .hint2 p {
+        font-size: 10px;  /* 字體稍微縮小 */
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
 }

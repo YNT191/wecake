@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We Cake</title>
+    <title>Product - We Cake</title>
     <link rel="stylesheet" href="css/styleproduct.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +13,17 @@
     <div class="container">
         <!-- Header Section -->
         <header>
-            <a>We cake</a>
+            <a href="index.html">We cake</a>
             <nav>
-                <ul>
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776; <!-- 漢堡圖示 -->
+                </div>
+                <ul id="menu" class="hidden">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Cart</a></li>
+                    <li><a href="Mow.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                     <li><a href="review.html">Ranking</a></li>
-                    <li><a href="#">Log in</a></li>
+                    <li><a href="login.html">LogIn</a></li>
                 </ul>
             </nav>
         </header>
@@ -44,39 +47,49 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="order">Order</label>
-                    <input type="text" id="order" name="order" placeholder="Enter your order" required>
+                    <label for="phone">Phone number</label>
+                    <input type="text" id="phone" name="phone number" placeholder="Enter your phone number" required>
                 </div>
 
                 <div class="form-buttons">
                     <button type="reset">Clear Form</button>
-                    <button type="submit">Submit Order</button>
+                    <!-- 修改了 Submit Order 按鍵 -->
+                    <button type="submit" class="animated-submit-button">
+                        <span class="button-text">Submit Order</span>
+                        <span class="box"></span>
+                        <span class="checkmark"></span>
+                    </button>
                 </div>
             </form>
         </div>
-        <div class="ReviewQueries">
-            <div class="Review_left">
-                <h1>Review queries</h1>
-                <button onclick="location.href='review.html'" type="Learn More">Learn More</button>
-            </div>
-            <div class="Review_right">
-                <div class="GiftIcon">
-                    <img src="./images/icon-02.png" />
-                    <p>Spring Discount</p>
-                    <p>Up to 20% off</p>
-                    <h2>Valid till 30th April</h2>
-                </div>   
-                <div class="CakeIcon">
-                    <img src="./images/icon-01.png" />
-                    <p>New Flavors</p>
-                    <p>Try our seasonal treats</p>
-                    <h2>Limited time only</h2>
+        
+        <footer>
+            <div class="footer_left">
+                <p>Contact Us: 123-456-7890</p>
+                <p>Email: info@wecake.com</p>
+                <p>Follow Us</p>
+                <div class="footer_left_img">
+                    <img src="images/ig.jpg" alt="ig">
+                    <img src="images/x.jpg" alt="x">
+                    <img src="images/fb.jpg" alt="fb">
                 </div>
             </div>
-        </div>
-        <footer>
-            <a>Contact Us: 123-456-7890</a>
-            <a>Email: info@wecake.com</a>
+            <div class="footer_middle">
+                <p>Address: [123abcake Forest Lane, Tainan, Taiwan"]</p>
+                <p>Opening Hours</p>
+                <p>Monday to Friday: 10:00 AM - 8:00 PM</p>
+                <p>Saturday & Sunday: 9:00 AM - 9:00 PM</p>
+                <p>We are open on public holidays!</p>
+            </div>
+            <div class="footer_right">
+                <p>Quick Links</p>
+                <div class="footer_right_a">
+                    <p>About Us</p>
+                    <p>Menu</p>
+                    <p>Order Online</p>
+                    <p>Sustainabilitys</p>
+                </div>
+            </div>
         </footer>
     </div>
 </body>

@@ -72,136 +72,135 @@ nav ul li a {
     cursor: pointer;
 }
 
-.OrderProcess {
-    width: 100%;
-    min-height: 662px; /* 確保區塊有最小高度 */
-    position: relative;
-    padding: 50px;
-    text-align: center;
-    overflow: hidden;
-    box-sizing: border-box;
-}
 
-.OrderProcess::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/cakes-hero.JPG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.25;
-    z-index: -1;
-}
-
-.OrderProcess h1 {
-    color: #703B3B;
-    font-size: 40px;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    z-index: 1;
-}
-
-form {
+.Bigpromote {
+    background-color: #FEF7ED;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    color: #703B3B;
+    transform-origin: top center; /* 縮小的基準點 */
 }
 
-.form-group {
-    width: calc(50% - 60px);
+.mainPart {
+    padding-top: 100px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
+    height: 1000px;
+    gap: 60px;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
 }
 
-.form-group label {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 5px;
-    font-size: 16px;
+.Left_part img {
+    width: 500px; /* 設定寬度 */
+    height: auto; /* 保持圖片比例 */
+    border-radius: 8px; /* 圓角效果 (可選) */
+    margin-bottom: 10px;
 }
 
-.form-group input {
-    width: 100%;
-    max-width: 510px;
-    height: 36px;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #778A50;
-    border-radius: 5px;
-    margin: 5px 0 15px 0;
+.smallImg img {
+    width: 144px; /* 設定寬度 */
+    height: auto; /* 保持圖片比例 */
+    margin: 10px; /* 添加間距 */
+    margin-top: 22px;
+    border-radius: 8px; /* 圓角效果 (可選) */
 }
 
-.form-buttons {
+.right_part {
+    background-color: #ffffff;
+    height: 675px;
+    width: 730px;
+    padding: 45px;
+}
+
+.right_part h3 {
+    font-size: 65px;
+}
+
+.right_part h4 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.right_part p {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+/* 保證 a 標籤不影響按鈕 */
+.animated-buy-button-link {
+    text-decoration: none; /* 去除超鏈接底線 */
+}
+
+/* 按鈕容器 */
+.button-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-    max-width: 700px;
-    margin-top: 20px;
+    justify-content: flex-end; /* 按鈕靠右 */
+    width: 100%; /* 讓按鈕容器寬度填滿，保證靠右 */
+    margin-top: 20px; /* 按需求添加間距 */
 }
 
-.form-buttons button {
-    width: 240px;
-    height: 48px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.form-buttons button[type="reset"] {
-    border: 2px solid #703B3B;
-    background-color: transparent;
-    color: #703B3B;
-}
-
-.form-buttons button[type="reset"]:hover {
-    background-color: #703B3B;
-    color: white;
-}
-
-.form-buttons button[type="submit"] {
+/* 按鈕樣式 */
+.animated-buy-button {
+    position: relative;
+    padding: 20px 50px; /* 增加內邊距，按鈕變大 */
+    font-size: 22px; /* 增加字體大小 */
     background-color: #CCD683;
     color: #703B3B;
     border: none;
-    position: relative;
+    border-radius: 50px;
     overflow: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.form-buttons button[type="submit"]::before {
+/* 滑鼠懸停時的效果 */
+.animated-buy-button:hover {
+    background-color: #5e6f3a;
+    color: #ffffff;
+    transform: scale(1.1); /* 當滑鼠移入時稍微放大 */
+}
+
+/* 按下按鈕時的效果 */
+.animated-buy-button:active {
+    transform: scale(0.9); /* 當按下時縮小 */
+}
+
+/* 按鈕的動畫效果 */
+.animated-buy-button::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: -150%;
-    width: 140%;
-    height: 100%;
-    background-color: #5e6f3a;
-    transition: left 0.3s ease;
-    z-index: 0;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
 }
 
-.form-buttons button[type="submit"]:hover::before {
-    left: 0;
+/* 當按鈕被點擊時，動畫效果 */
+.animated-buy-button:active::after {
+    width: 300px; /* 擴大動畫效果的範圍 */
+    height: 300px;
 }
 
-.form-buttons button[type="submit"] span {
-    position: relative;
-    z-index: 1;
-    transition: color 0.3s ease;
+
+.rating {
+    display: flex;
+    gap: 10px; /* 增加星星間距 */
+    font-size: 40px; /* 增加星星大小 */
+    color: #FFD700; /* 金黃色 */
 }
 
-.form-buttons button[type="submit"]:hover span {
-    color: #ffffff;
+.star {
+    cursor: pointer; /* 鼠標移上變為可點擊狀態 */
+    transition: transform 0.2s ease; /* 增加動畫效果 */
 }
 
+.star:hover {
+    transform: scale(1.2); /* 當滑鼠移上放大 */
+}
 
 
 /* Footer Styling */
@@ -227,7 +226,12 @@ footer img {
     width: 30px;
 }
 
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 5px 0;
+    }
+
     header a {
         font-size: 30px;
     }
@@ -247,9 +251,10 @@ footer img {
     }
 
     nav ul li {
-        margin: 10px 0;
+        
         width: 100%;
         text-align: center;
+        margin-left: 20px;
     }
 
     .menu-toggle {
@@ -268,10 +273,51 @@ footer img {
         box-shadow: none; /* 移除陰影效果 */
     }
 
-    .OrderProcess h1 {
-        font-size: 30px;
+    .Bigpromote {
+        transform: scale(0.9); /* 調整這個值來控制縮放比例，這裡是縮小至85% */
+        padding: 0 5px; /* 可以調整內邊距，避免元素過於擁擠 */
     }
-    
+
+    .mainPart {
+        transform: scale(0.90); /* 調整這個值來控制縮放比例，這裡是縮小至85% */
+        
+    }
+
+    .Left_part img {
+        width: 400px; /* 調整圖片寬度 */
+    }
+
+    .smallImg img {
+        width: 110px; /* 調整圖片寬度 */
+    }
+
+    .right_part {
+        width: 80%; /* 設定右邊區域寬度為 80% */
+        height: 550px;
+        padding: 30px; /* 調整內邊距 */
+    }
+
+    .right_part h3 {
+        font-size: 30px; /* 減少字體大小 */
+    }
+
+    .right_part h4 {
+        font-size: 35px; /* 減少字體大小 */
+    }
+
+    .right_part p {
+        font-size: 18px; /* 減少字體大小 */
+    }
+
+    .rating {
+        font-size: 30px; /* 減少星星的大小 */
+    }
+
+    .animated-buy-button {
+        font-size: 15px; /* 調整按鈕字體大小 */
+        padding: 10px 30px; /* 調整按鈕內邊距 */
+    }
+
     footer {
         justify-content: center;
         text-align: center;
@@ -294,7 +340,7 @@ footer img {
     }
 }
 
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
     header {
         height: 5px;
     }
@@ -341,18 +387,9 @@ footer img {
         display: flex;
     }
 
-    .OrderProcess h1 {
-        font-size: 28px;
-    }
-
-    .form-group {
-        width: 100%;
-        padding-left: 10px;
-    }
-
-    .form-buttons {
+    .mainPart {
+        transform: scale(0.70); /* 調整這個值來控制縮放比例，這裡是縮小至85% */
         flex-direction: column;
-        align-items: center;
     }
 
     footer {

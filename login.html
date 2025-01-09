@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME - We Cake</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Log In - We Cake</title>
+    <link rel="stylesheet" href="css/stylelogIn.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
@@ -28,56 +28,41 @@
             </nav>
         </header>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-text">
-                <a>Welcome To Wecake</a>
-            </div>
-            <img src="images/cakes-hero.JPG" alt="Cakes Display">
-        </section>
-
-        <!-- Popular Products Section -->
-        <section class="products">
-            
-            <div class="product-gallery">
-                <div class="product">
-                    <img src="images/strawberry-cake.JPG" alt="Strawberry Cake">
-                    <p>Lots of strawberry cake inside Cake</p>
-                    <p class="price">$100</p>
+        <div class="main">
+            <div class="container_2">
+                <div class="mainIMG">
+                    <img src="images/杯子蛋糕.jpg" alt="logIN_IMG">
                 </div>
-
-                <div class="product" onclick="location.href='introduce.html';">
-                    <img src="images/shrimp-cake.jpg" alt="Shrimp Party Cake">
-                    <p>Shrimp Party Cake</p>
-                    <p class="price">$120</p>
+                <div class="Log_In">
+                    
+                    <h1>Log In</h1>
+                    <form action="submit_order.html" method="post">
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="text" id="Email" name="Email" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="Password">Password</label>
+                            <input type="text" id="Password" name="Password" placeholder="Enter your password" required>
+                        </div>
+        
+                        
+        
+                        <div class="form-buttons">
+                            <button type="reset">Clear Form</button>
+                            <!-- 修改了 Submit Order 按鍵 -->
+                            <button type="submit" class="animated-submit-button">
+                                <span class="button-text">GO</span>
+                                <span class="box"></span>
+                                <span class="checkmark"></span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                
-                <div class="product">
-                    <img src="images/chocolate-cake.jpg" alt="Chocolate Cake">
-                    <p>Chocolate Super Premium Cake</p>
-                    <p class="price">$90</p>
-                </div>
-            </div>
-            
-        </section>
-
-        <!-- Special Recommendations Section -->
-        <div class="recommendations">
-            <div class="featured">
-                <img src="images/strawberry-montblanc.jpg" alt="Strawberry Montblanc Cake">
-            </div>
-            <div class="hint">
-                <h3>Special Recommendations</h3>
-                <p>Explore our featured cakes and desserts.</p>
-                <section class="featured2">
-                    <img src="images/creamy-cake.jpg" alt="Signature Malt Cake">
-                    <div class="hint2">
-                        <h4>Signature Malt Cake</h4>
-                        <p>Rich and decadent, a must-try for chocolate lovers.</p>
-                    </div>
-                </section>
             </div>
         </div>
+        
         <footer>
             <div class="footer_left">
                 <p>Contact Us: 123-456-7890</p>
@@ -107,6 +92,6 @@
             </div>
         </footer>
     </div>
-    <script src="js/style.js"></script>
+    <script src="js/stylelogIn.js"></script>
 </body>
 </html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - We Cake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylecart.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <a href="index.html">We cake</a>
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776; <!-- 漢堡圖示 -->
+                </div>
+                <ul id="menu" class="hidden">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Mow.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="review.html">Ranking</a></li>
+                    <li><a href="login.html">LogIn</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main">
+            <form id="cart-form">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-text">
+                    <a>Cart</a>
+                </div>
+                <img src="images/cherrycookie.png" alt="Cakes Display">
+            </section>
+                <section class="commodity">
+                    <div class="commoditytitle">
+                        <a>Commodity</a>
+                    </div>
+                    <div class="item">
+                        <img src="images/raspberrycake.png" alt="Strawberry Cake Tower">
+                        <div>
+                            <div class="commodityname">
+                                <a>Strawberry Cake Tower</a>
+                            </div>
+                            <div class="commodityquantity">
+                                <label for="quantity-1">Quantity:</label>
+                                <select id="quantity-1" name="quantity-1">
+                                    <option value="0"selected>-</option>
+                                    <option value="1" >1</option>
+                                    <option value="2" >2</option>
+                                    <option value="3" >3</option>
+                                </select>
+                            </div>
+                        <div class="commodityremark">
+                            <label for="remark-1">Remark:</label>
+                            <input type="text" id="remark-1" name="remark-1" placeholder="E.g., no strawberries">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more items here -->
+                <div class="item">
+                    <img src="images/cherrychocolatecake.png" alt="Cherry Chocolate Cake">
+                    <div>
+                        <div class="commodityname">
+                            <a>Cherry Chocolate Cake</a>
+                        </div>
+                            <div class="commodityquantity">
+                                <label for="quantity-2">Quantity:</label>
+                                <select id="quantity-2" name="quantity-2">
+                                    <option value="0"selected>-</option>
+                                    <option value="1" >1</option>
+                                    <option value="2" >2</option>
+                                    <option value="3" >3</option>
+                                </select>
+                            </div>
+                        <div class="commodityremark">
+                            <label for="remark-2">Remark:</label>
+                            <input type="text" id="remark-2" name="remark-2" placeholder="E.g., no strawberries">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/rosenstrawberrycake.png" alt="Rose and Strawberry Cake with French Vanilla">
+                    <div>
+                        <div class="commodityname">
+                            <a>Rose and Strawberry Cake with French Vanilla</a>
+                        </div>
+                            <div class="commodityquantity3">
+                                <label for="quantity-3">Quantity:</label>
+                                <select id="quantity-3" name="quantity-3">
+                                    <option value="0"selected>-</option>
+                                    <option value="1" >1</option>
+                                    <option value="2" >2</option>
+                                    <option value="3" >3</option>
+                                </select>
+                            </div>
+                        <div class="commodityremark3">
+                            <label for="remark-3">Remark:</label>
+                            <input type="text" id="remark-3" name="remark-3" placeholder="E.g., no strawberries">
+                        </div>
+                </div>
+                </section>
+            <div class="form-buttons">
+                <button type="submit" class="animated-submit-button" onclick="location.href='product.html';">
+                    <span class="button-text">Next</span>
+                    <span class="box"></span>
+                    <span class="checkmark"></span>
+                </button>
+            </div>
+        </form>
+    </div class="main">
+
+    <footer>
+        <div class="footer_left">
+            <p>Contact Us: 123-456-7890</p>
+            <p>Email: info@wecake.com</p>
+            <p>Follow Us</p>
+            <div class="footer_left_img">
+                <img src="images/ig.jpg" alt="ig">
+                <img src="images/x.jpg" alt="x">
+                <img src="images/fb.jpg" alt="fb">
+            </div>
+        </div>
+        <div class="footer_middle">
+            <p>Address: [123abcake Forest Lane, Tainan, Taiwan"]</p>
+            <p>Opening Hours</p>
+            <p>Monday to Friday: 10:00 AM - 8:00 PM</p>
+            <p>Saturday & Sunday: 9:00 AM - 9:00 PM</p>
+            <p>We are open on public holidays!</p>
+        </div>
+        <div class="footer_right">
+            <p>Quick Links</p>
+            <div class="footer_right_a">
+                <p>About Us</p>
+                <p>Menu</p>
+                <p>Order Online</p>
+                <p>Sustainabilitys</p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="js/stylecart.js"></script>
+</body>
+</html>

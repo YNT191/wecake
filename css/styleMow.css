@@ -1,0 +1,640 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FEF7ED;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #FEF7ED;
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease; /* 平滑顯示過渡效果 */
+  }
+  
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    justify-content: space-between;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    background-color: #ffffff;
+}
+
+header a {
+    font-family: "Italiana", sans-serif;
+    font-size: 48px;
+    color: #000000;
+    text-decoration: none;
+}
+nav {
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: flex-end; /* 將菜單項目靠右對齊 */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #703B3B;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Section 1 Styling */
+#section1 {
+    position: relative;
+    height: 110vh;
+    background-image: url('/images/cows.jpg'); /* 替換成你的圖片路徑 */
+    background-size: cover; /* 圖片滿版 */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#section1 .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 2; /* 確保文字在圖片上方 */
+    padding-top: 100px;
+}
+
+
+.panel.panel-red .content h2 {
+    font-family: "Italiana", sans-serif; /* 字體 */
+    font-size: 10rem; /* 字號 */
+    color: #ffffff; /* 字體顏色 */
+    text-align: center; /* 對齊方式 */
+    margin-bottom: 20px; /* 下方間距 */
+}
+
+.scrolling-image {
+    position: absolute;
+    top: 50%; /* 與父元素的中心對齊 */
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* 縮小圖片初始狀態 */
+    opacity: 0; /* 初始為不可見 */
+    transition: all 0.5s ease; /* 平滑過渡效果 */
+    z-index: 3; /* 確保圖片在文字上方 */
+}
+
+.scrolling-image img {
+    max-width: 1450px;
+    height: auto;
+}
+
+
+.section-title, .section-info {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+
+/* Section 2 - Content Styling */
+#section2 {
+    position: relative;
+    height: 120vh;
+    background-image: url('images/brand-concept.jpg'); /* 替換成你的背景圖片路徑 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FEF7ED; 
+}
+
+#section2 .content2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* 將標題放在圖片和段落的上方 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    z-index: 2;
+    padding: 0 20px;
+}
+
+#section2 .content2 h2 {
+    font-family: "Italiana", sans-serif !important;
+    font-size: 4rem; /* 標題字型大小 */
+    margin-bottom: 40px; /* 標題與下面內容之間的間距 */
+    text-align: center;
+}
+
+#section2 .content2 .first.text {
+    display: flex;
+    flex-direction: row; /* 圖片與段落並排 */
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+}
+
+#section2 .content2 img {
+    max-width: 25%; /* 設定圖片最大寬度 */
+    height: auto; /* 保持圖片的寬高比例 */
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+#section2 .content2 p {
+    font-size: 1.5rem; /* 段落字型大小 */
+    max-width: 50%; /* 設定段落的最大寬度 */
+    line-height: 1.6; 
+    margin-left: 40px;
+}
+
+/* Section 3 - Reviews Section */
+#section3 {
+    padding: 32px 0; /* 40px * 0.8 */
+    background-color: #f7f7f7; /* 背景色不變 */
+    height: 120vh;
+    background-color: #FEF7ED;
+    width: 100%;
+}
+
+/* Customer Reviews Title */
+
+#section3 .content3 {
+    text-align: center;
+}
+
+#section3 .content3 h2 {
+    font-size: 1.6em; /* 2em * 0.8 */
+    color: #835858;
+    margin-bottom: 16px; /* 20px * 0.8 */
+    text-align: center;
+}
+
+#section3 .content3 .product-title h1 {
+    font-size: 2.4em; /* 3em * 0.8 */
+    color: #5c4b51;
+    margin: 0 auto;
+}
+
+#section3 .content3 .product-title p {
+    color: #7d6762;
+    margin-top: 8px; /* 10px * 0.8 */
+    text-align: center;
+}
+
+/* Rating Summary */
+#section3 .content3 .rating-summary {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px; /* 20px * 0.8 */
+}
+
+#section3 .content3 .rating-circle .circle {
+    width: 80px; /* 100px * 0.8 */
+    height: 80px; /* 100px * 0.8 */
+    border-radius: 50%;
+    background-color: #e3cfcf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em; /* 1.5em * 0.8 */
+    color: #5c4b51;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+#section3 .content3 .rating-circle p {
+    margin-top: 8px; /* 10px * 0.8 */
+    color: #835858;
+    margin: 0 auto;
+}
+
+/* Review Cards */
+#section3 .content3 .review-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px; /* 20px * 0.8 */
+    margin-top: 32px; /* 40px * 0.8 */
+}
+
+#section3 .content3 .review-card {
+    background-color: #fff;
+    padding: 16px; /* 20px * 0.8 */
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* 4px * 0.8, 8px * 0.8 */
+    text-align: left;
+    color: #5c4b51;
+    width: 272px; /* 340px * 0.8 */
+    height: 121.6px; /* 152px * 0.8 */
+}
+
+#section3 .content3 .review-card .reviewer-name {
+    font-weight: bold;
+    margin-bottom: 4px; /* 5px * 0.8 */
+    font-size: 1.2em; /* 設定為較小的字型 */
+}
+
+#section3 .content3 .review-card .text {
+    font-weight: bold;
+    margin-bottom: 4px; /* 5px * 0.8 */
+    font-size: 0.9em; /* 設定為較小的字型 */
+}
+
+#section3 .content3 .review-card .stars {
+    color: #f4b400; /* Gold color for stars */
+    font-size: 1em; /* 1.2em * 0.8 */
+}
+
+
+
+
+.panel {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    text-align: center;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+
+
+.panel h2 {
+    margin: 0;
+    font-size: 100px;
+}
+
+.panel p {
+    font-size: 1.5rem;
+}
+
+.panel-red {
+    background: #FEF7ED;
+}
+
+.panel-blue {
+    background: #3498db;
+}
+
+.panel-green {
+    background: #2ecc71;
+}
+
+.panel-yellow {
+    background: #f1c40f;
+}
+
+/* Footer Styling */
+footer {
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background-color: #FFFFFF;
+    display: flex;
+    gap: 100px;
+}
+
+footer p {
+    margin-left: 20px;
+    color: #5c4b51;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+footer img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Smooth animation for panels */
+.panel.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* 對於屏幕寬度小於 768px，縮放整體 */
+@media (max-width: 768px) {
+
+    header a {
+        font-size: 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        
+        width: 100%;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: none; /* 隱藏漢堡菜單按鈕 */
+    }
+
+    nav ul {
+        display: flex; /* 保持菜單為展開狀態 */
+        flex-direction: row;
+        justify-content: space-between;
+        position: static; /* 移除絕對定位 */
+        box-shadow: none; /* 移除陰影效果 */
+    }
+
+
+    #section2 {
+        height: 70vh !important;
+    }
+
+    #section2 .content2 h2 {
+        font-size: 50px; /* Smaller text size for mobile */
+    }
+
+    #section2 .content2 p {
+        font-size: 14px; /* Increase font size a bit */
+    }
+
+    #section2 .content2 img {
+        width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 0; /* Remove right margin */
+        margin-top: 20px;
+    }
+
+    .panel {
+        transform: scale(1); /* Ensure panels are at normal size on mobile */
+        opacity: 1;
+    }
+
+    /* Additional tweaks for smaller screens */
+    header a {
+        font-size: 30px; /* Smaller header font size */
+    }
+
+    #section1 {
+        height: 70vh !important;
+    }
+
+    .panel.panel-red .content h2 {
+        font-size: 100px;
+    }
+
+
+    #section3 {
+        height: 120vh;  /* 調整高度 */
+        padding: 24px 0; /* 調整 padding */
+        display: flex;
+        justify-content: center;
+    }
+
+    #section3 .content3 h2 {
+        font-size: 1.2em; /* 小型屏幕上標題的字型大小 */
+    }
+
+    #section3 .content3 .product-title h1 {
+        font-size: 2em; /* 小型屏幕上產品標題的字型大小 */
+    }
+
+    #section3 .content3 .product-title p {
+        font-size: 1em; /* 小型屏幕上產品描述的字型大小 */
+    }
+
+    #section3 .content3 .review-cards {
+        grid-template-columns: repeat(2, 1fr); /* 調整卡片佈局為 2 列 */
+    }
+
+    #section3 .content3 .review-card {
+        width: 220px; /* 調整評論卡片寬度 */
+        height: auto; /* 高度自動調整 */
+        padding: 12px; /* 調整卡片內間距 */
+    }
+
+    #section3 .content3 .review-card .reviewer-name {
+        font-size: 1em; /* 小型屏幕上評論者名字的字型大小 */
+    }
+
+    #section3 .content3 .review-card .text {
+        font-size: 0.8em; /* 小型屏幕上評論內容的字型大小 */
+    }
+
+    #section3 .content3 .review-card .stars {
+        font-size: 1em; /* 小型屏幕上星星評價的字型大小 */
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+        padding: 30px;
+        background-color: #FFFFFF;
+        display: flex;
+        gap: 100px;
+    }
+    
+    footer p {
+        margin-left: 20px;
+        color: #5c4b51;
+        font-size: 9px;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    footer img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    header {
+        height: 5px;
+    }
+
+    header a {
+        font-size: 18px;
+        color:rgba(255, 255, 255, 0)
+    }
+
+    nav ul {
+        display: none; /* 隱藏菜單 */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%; /* 讓每個菜單項目填滿整個選單寬度 */
+        text-align: center; /* 將文字置中 */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* 調整字體大小以便於小螢幕上閱讀 */
+        
+        display: block; /* 使連結成為塊級元素，便於點擊 */
+    }
+
+    .menu-toggle {
+        display: block; /* 顯示漢堡菜單按鈕 */
+        display: flex;
+        align-items: center;
+        font-size: 22px; /* 漢堡選單字型大小 */
+    }
+
+    /* 展開菜單 */
+    nav ul.show {
+        display: flex;
+    }
+
+    #section2 {
+        height: 100vh !important;
+        display: flex;
+        flex-direction: column; /* 父容器設為flex布局並垂直排列 */
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #section2 .content2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center; /* 垂直居中 */
+        align-items: center;  /* 水平居中 */
+        text-align: center;
+        color: rgb(0, 0, 0);
+        z-index: 2;
+        padding: 0 20px;
+    }
+
+    #section2 .content2 h2 {
+        font-size: 40px;
+        margin-bottom: 20px; /* 標題和圖片之間的間距 */
+    }
+
+    #section2 .content2 p {
+        font-size: 14px; /* Increase font size a bit */
+    }
+
+    #section2 .content2 img {
+        width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 20px;
+    }
+
+    #section3 {
+        height: 130vh;  /* 調整高度 */
+        padding: 24px 0; /* 調整 padding */
+        display: flex;
+        justify-content: center;
+    }
+
+    #section3 .content3 h2 {
+        font-size: 1em; /* 小型屏幕上標題的字型大小 */
+    }
+
+    #section3 .content3 .product-title h1 {
+        font-size: 1.5em; /* 小型屏幕上產品標題的字型大小 */
+    }
+
+    #section3 .content3 .product-title p {
+        font-size: 1em; /* 小型屏幕上產品描述的字型大小 */
+    }
+
+    #section3 .content3 .review-cards {
+        grid-template-columns: repeat(2, 1fr); /* 調整卡片佈局為 2 列 */
+    }
+
+    #section3 .content3 .review-card {
+        width: 100px; /* 調整評論卡片寬度 */
+        height: auto; /* 高度自動調整 */
+        padding: 10px; /* 調整卡片內間距 */
+    }
+
+    #section3 .content3 .review-card .reviewer-name {
+        font-size: 1em; /* 小型屏幕上評論者名字的字型大小 */
+    }
+
+    #section3 .content3 .review-card .text {
+        font-size: 0.8em; /* 小型屏幕上評論內容的字型大小 */
+    }
+
+    #section3 .content3 .review-card .stars {
+        font-size: 1em; /* 小型屏幕上星星評價的字型大小 */
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}

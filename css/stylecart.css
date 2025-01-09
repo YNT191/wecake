@@ -1,0 +1,608 @@
+.italiana-regular {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* 防止橫向滾動條 */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.hero img {
+    height: auto; /* 使圖片高度自動調整 */
+    width: 100%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    color: #000000;
+    font-size: 128px;
+    font-family: "Italiana", sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1440px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #FFFFFF;
+    position: relative;
+    
+}
+
+header a {
+    font-family: "Italiana", sans-serif;
+    font-size: 48px;
+    color: #000000;
+    text-decoration:none;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: flex-end; /* 將菜單項目靠右對齊 */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #703B3B;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+/* Show menu toggle (hamburger icon) */
+.menu-toggle {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.main {
+    
+    background-color: #FEF7ED;
+}
+
+.container_2 {
+    height: 900px;
+    padding-top: 80px;
+    transform-origin: top; /* 設定縮放的起點 */
+}
+
+.mainIMG img {
+    height: 250px; /* 固定高度 */
+    width: 78.5%; /* 寬度設置為100%，使其適應容器 */
+    position: relative;
+    object-fit: cover; /* 確保圖片不變形，填滿區域 */
+    display: block; /* 去除圖片周圍多餘的空白 */
+    margin: 0 auto; /* 將圖片置中 */
+}
+
+.Log_In {
+    width: 78.5%; /* 寬度設置為100%，使其適應容器 */
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin: 0 auto; /* 將圖片置中 */
+}
+
+.Log_In h1 {
+    color: #703B3B;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: #703B3B;
+    
+}
+
+.form-group {
+    width: calc(50% - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.form-group label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.form-group input {
+    width: 100%;
+    max-width: 510px;
+    height: 36px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #778A50;
+    border-radius: 5px;
+    margin: 5px 0 15px 0;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    height: 380px;
+    max-width: 1204px;
+    justify-content: right;
+}
+
+.form-buttons button {
+    width: 240px;
+    height: 48px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #CCD683;
+    color: #703B3B;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-buttons button[type="submit"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;  /* 我從-120改到-150 */
+    width: 140%;
+    height: 100%;
+    background-color: #5e6f3a;
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+.form-buttons button[type="submit"]:hover::before {
+    left: 0;
+}
+
+.form-buttons button[type="submit"] span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.form-buttons button[type="submit"]:hover span {
+    color: #FFFFFF;
+}
+
+.commodity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.commoditytitle {
+    width: 210px;
+    height: 44px;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 24px;
+    color: #703B3B;
+}
+
+.commoditytitle a{
+    width: 210px;
+    top: 100px;
+    padding-top: 100px;
+}
+
+.commodityname {
+    top: 100px;
+    color: #703B3B;
+    height: 44px;    
+    font-size: 24px;
+    justify-content: center;
+}
+
+.commodityquantity, .commodityquantity3 {
+    color: #703B3B;
+    height: 52px;
+    font-size: 24px;
+}
+
+#quantity-1, #quantity-2, #quantity-3 {
+    width: 124px;
+    height: 43px;
+    background-color: #FEF7ED;
+    font-size: 24px;
+    border-width: 0px;
+}
+
+#remark-1, #remark-2, #remark-3 {
+    width: 825px;
+    height: 80px;
+    margin-left: 5px;
+    background-color: #FEF7ED;
+    font-size: 15px;
+    border-width: 0px;
+}
+
+.commodityremark, .commodityremark3 {
+    color: #703B3B;
+    height: 80px;
+    font-size: 24px;
+}
+
+.item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 1204px;
+    height: 225px;
+    background-color: #FFFFFF;
+    color: #703B3B;
+}
+  
+.item img {
+    width: 217px;
+    height: 225px;
+}
+  
+.item h3 {
+    margin: 0;
+}
+
+/* Footer Styling */
+footer {
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background-color: #FFFFFF;
+    display: flex;
+    gap: 100px;
+}
+
+footer p {
+    margin-left: 20px;
+    color: #5c4b51;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+footer img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Smooth animation for panels */
+.panel.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+@media (max-width: 768px) {
+    
+    .hero img {
+        height: auto; /* 使圖片高度自動調整 */
+        max-width: 768; /* 使圖片高度自動調整 */
+    }
+    
+    header a {
+        font-size: 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        
+        width: 100%;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: none; /* 隱藏漢堡菜單按鈕 */
+    }
+
+    nav ul {
+        display: flex; /* 保持菜單為展開狀態 */
+        flex-direction: row;
+        justify-content: space-between;
+        position: static; /* 移除絕對定位 */
+        box-shadow: none; /* 移除陰影效果 */
+    }
+
+    .commodity {
+        gap: 25px; /* 縮小項目之間的間距 */
+        justify-content: center;
+    }
+
+    .item {
+        flex-direction: column; /* 垂直排列商品信息和圖片 */
+        align-items: center;
+        width: auto; /* 自適應寬度 */
+        height: auto;
+        justify-content: center;
+    }
+
+    .item img {
+        padding-top: 20px;
+        width: 200px; /* 縮小圖片尺寸 */
+        height: auto;
+    }
+
+    .commodityname a {
+        font-size: 20px; /* 縮小商品名稱字體大小 */
+    }
+
+    .commodityquantity label, 
+    .commodityremark label {
+        font-size: 16px; /* 調整表單標籤字體 */
+    }
+
+    .commodityremark3 label,
+    .commodityquantity3 label {
+        font-size: 16px;
+        padding-left: 65px;
+        gap: 10px;
+    }
+
+    #remark-1, #remark-2, #remark-3 {
+        width: 200px; /* 讓備註輸入框佔滿寬度 */
+        height: 50px;
+        padding-bottom: 20px;
+    }
+
+    #quantity-1, #quantity-2, #quantity-3 {
+        width: 200px;
+        height: 40px; /* 調整下拉選單高度 */
+    }
+
+    .form-buttons {
+        
+        height: 100px;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .form-buttons button {
+        width: 200px; /* 調整按鈕大小 */
+        height: 40px;
+        font-size: 16px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+        padding: 30px;
+        background-color: #FFFFFF;
+        display: flex;
+        gap: 100px;
+    }
+    
+    footer p {
+        margin-left: 20px;
+        color: #5c4b51;
+        font-size: 9px;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    footer img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    header {
+        height: 5px;
+    }
+
+    header a {
+        font-size: 18px;
+    }
+
+    nav ul {
+        display: none; /* 隱藏菜單 */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%; /* 讓每個菜單項目填滿整個選單寬度 */
+        text-align: center; /* 將文字置中 */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* 調整字體大小以便於小螢幕上閱讀 */
+        
+        display: block; /* 使連結成為塊級元素，便於點擊 */
+    }
+
+    .menu-toggle {
+        display: block; /* 顯示漢堡菜單按鈕 */
+        display: flex;
+        align-items: center;
+        font-size: 22px; /* 漢堡選單字型大小 */
+    }
+
+    /* 展開菜單 */
+    nav ul.show {
+        display: flex;
+    }
+
+    .hero {
+        display: flex;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        color: #000000;
+        font-size: 32px;
+        font-family: "Italiana", sans-serif;
+    }
+
+    .commodity {
+        gap: 10px; /* 縮小項目之間的間距 */
+    }
+
+    .item {
+        flex-direction: column; /* 垂直排列商品信息和圖片 */
+        align-items: center;
+        width: auto; /* 自適應寬度 */
+        height: auto;
+    }
+
+    .item img {
+        width: 150px; /* 縮小圖片尺寸 */
+        height: auto;
+    }
+
+    .commodityname a {
+        font-size: 16px; /* 調整商品名稱字體大小 */
+    }
+
+    .commodityquantity label, 
+    .commodityremark label {
+        font-size: 14px; /* 調整表單標籤字體 */
+    }
+
+    .commodityquantity3 label, 
+    .commodityremark3 label {
+        font-size: 14px; /* 調整表單標籤字體 */
+        padding-left: 43px;
+    }
+
+    #remark-1, #remark-2, #remark-3 {
+        width: 150px; /* 讓備註輸入框佔滿寬度 */
+        height: 40px; /* 調整輸入框高度 */
+    }
+
+    #quantity-1, #quantity-2, #quantity-3 {
+        width: 150px; /* 讓下拉選單佔滿寬度 */
+        height: 36px; /* 調整下拉選單高度 */
+    }
+
+    .container_2 {
+        transform: scale(0.9.5); /* 在小螢幕下，縮小到 70% */
+        transform-origin: top;
+    }
+
+    .Log_In h1 {
+        font-size: 30px;
+    }
+
+    .form-group {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        max-width: 80px; /* Keep or adjust container width */
+        height: 50px;
+        margin-bottom: 40px;
+    }
+
+    /* Adjust button size */
+    .form-buttons button {
+        width: 150px; /* Adjust individual button width */
+        height: 50px; /* Adjust individual button height */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}

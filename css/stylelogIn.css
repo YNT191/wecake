@@ -72,35 +72,41 @@ nav ul li a {
     cursor: pointer;
 }
 
-.OrderProcess {
-    width: 100%;
-    min-height: 662px; /* 確保區塊有最小高度 */
+.main {
+    
+    background-color: #FEF7ED;
+}
+
+.container_2 {
+    height: 900px;
+    padding-top: 80px;
+    transform-origin: top; /* 設定縮放的起點 */
+}
+
+.mainIMG img {
+    height: 250px; /* 固定高度 */
+    width: 78.5%; /* 寬度設置為100%，使其適應容器 */
+    position: relative;
+    object-fit: cover; /* 確保圖片不變形，填滿區域 */
+    display: block; /* 去除圖片周圍多餘的空白 */
+    margin: 0 auto; /* 將圖片置中 */
+}
+
+.Log_In {
+    width: 78.5%; /* 寬度設置為100%，使其適應容器 */
     position: relative;
     padding: 50px;
     text-align: center;
     overflow: hidden;
     box-sizing: border-box;
+    background-color: #ffffff;
+    margin: 0 auto; /* 將圖片置中 */
 }
 
-.OrderProcess::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/cakes-hero.JPG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.25;
-    z-index: -1;
-}
-
-.OrderProcess h1 {
+.Log_In h1 {
     color: #703B3B;
     font-size: 40px;
-    margin-top: 80px;
+    margin-top: 20px;
     margin-bottom: 50px;
     z-index: 1;
 }
@@ -202,8 +208,6 @@ form {
     color: #ffffff;
 }
 
-
-
 /* Footer Styling */
 footer {
     justify-content: center;
@@ -226,7 +230,6 @@ footer img {
     height: 30px;
     width: 30px;
 }
-
 @media (max-width: 768px) {
     header a {
         font-size: 30px;
@@ -247,9 +250,10 @@ footer img {
     }
 
     nav ul li {
-        margin: 10px 0;
+        
         width: 100%;
         text-align: center;
+        margin-left: 20px;
     }
 
     .menu-toggle {
@@ -268,10 +272,15 @@ footer img {
         box-shadow: none; /* 移除陰影效果 */
     }
 
-    .OrderProcess h1 {
-        font-size: 30px;
+    .container_2 {
+        transform: scale(0.9.5); /* 在小螢幕下，縮小到 70% */
+        transform-origin: top;
     }
-    
+
+    .mainIMG img {
+        max-height: 200px;
+    }
+
     footer {
         justify-content: center;
         text-align: center;
@@ -341,8 +350,13 @@ footer img {
         display: flex;
     }
 
-    .OrderProcess h1 {
-        font-size: 28px;
+    .container_2 {
+        transform: scale(0.9.5); /* 在小螢幕下，縮小到 70% */
+        transform-origin: top;
+    }
+
+    .Log_In h1 {
+        font-size: 30px;
     }
 
     .form-group {
@@ -353,6 +367,15 @@ footer img {
     .form-buttons {
         flex-direction: column;
         align-items: center;
+        max-width: 80px; /* Keep or adjust container width */
+        height: 100px;
+    }
+
+    /* Adjust button size */
+    .form-buttons button {
+        width: 150px; /* Adjust individual button width */
+        height: 50px; /* Adjust individual button height */
+        font-size: 12px; /* Smaller font size */
     }
 
     footer {
